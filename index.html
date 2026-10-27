@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quiz interativo de conhecimentos gerais criado para um projeto escolar.">
+  <title>Desafio do Saber | Quiz Interativo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="topo">
+      <div class="marca" aria-hidden="true">✦</div>
+      <div>
+        <p class="sobretitulo">PROJETO ESCOLAR • HTML, CSS E JAVASCRIPT</p>
+        <h1>Desafio do Saber</h1>
+        <p class="subtitulo">Teste seus conhecimentos, uma pergunta de cada vez.</p>
+      </div>
+    </header>
+
+    <section class="painel" aria-labelledby="titulo-quiz">
+      <div class="barra-info">
+        <span id="progresso-texto">Pergunta 1 de 8</span>
+        <span id="pontos-texto">Pontos: 0</span>
+      </div>
+      <div class="trilho" aria-hidden="true"><div id="progresso-barra"></div></div>
+
+      <div id="inicio" class="tela">
+        <div class="ilustracao" aria-hidden="true">🧠</div>
+        <h2 id="titulo-quiz">Preparado para o desafio?</h2>
+        <p>São 8 perguntas de conhecimentos gerais. Escolha uma resposta para descobrir se acertou e aprender algo novo.</p>
+        <ul class="detalhes">
+          <li>✓ 8 perguntas</li>
+          <li>✓ Pontuação automática</li>
+          <li>✓ Resultado no final</li>
+        </ul>
+        <button id="comecar" class="botao principal">Começar quiz <span aria-hidden="true">→</span></button>
+      </div>
+
+      <div id="pergunta-tela" class="tela escondido" aria-live="polite">
+        <p class="categoria" id="categoria">CONHECIMENTOS GERAIS</p>
+        <h2 id="pergunta">Pergunta aparece aqui</h2>
+        <div id="opcoes" class="opcoes"></div>
+        <p id="feedback" class="feedback" role="status"></p>
+        <button id="proxima" class="botao principal escondido">Próxima pergunta →</button>
+      </div>
+
+      <div id="resultado" class="tela escondido" aria-live="polite">
+        <div id="resultado-icone" class="ilustracao" aria-hidden="true">🏆</div>
+        <p class="categoria">SEU RESULTADO</p>
+        <h2 id="resultado-titulo">Muito bem!</h2>
+        <p id="resultado-descricao"></p>
+        <div class="placar"><strong id="nota">0/8</strong><span>respostas corretas</span></div>
+        <button id="reiniciar" class="botao principal">Jogar novamente ↻</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>Feito para aprender e se divertir • Projeto de programação</p>
+      <p class="tecnologias">HTML <span>•</span> CSS <span>•</span> JavaScript</p>
+    </footer>
+  </main>
+</body>
+</html>
